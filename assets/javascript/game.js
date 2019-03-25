@@ -54,8 +54,7 @@ $(function () {
         $("#current-total").html(currentTotalCounter);  
     };
 
-    // when the player clicks on a pendant, it will add a specific amount of points to the player's total score -- is there a way to loop this? would it be $("#pendant[i+1]").click(function(){ currentTotalCounter = currentTotalCounter + pendantNumbers[i]; $("#current-total") = currentTotalCounter; checkIfWon(); });
-
+    // when the player clicks on a pendant, it will add a specific amount of points to the player's total score -- is there a way to loop this? 
     // is equivalent to: document.getElementById("pendant1").onclick = function() {
     $("#pendant1").click(function(){
         console.log("clicking the first pendant grabs this number:" + pendantNumbers[0]);
@@ -90,7 +89,6 @@ $(function () {
         // is equivalent to: currentTotalElement.innerHTML = currentTotalCounter;
         $("#current-total").html(currentTotalCounter); 
         checkIfWon();
-
     });
 
     // create a function that checks if the player wins -- if their total score matches the random number / the player loses if their score goes above the random number
