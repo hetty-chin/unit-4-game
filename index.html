@@ -4,10 +4,13 @@
         <meta charset="UTF-8">
         <meta type="description" content="This is a game where a random number has been chosen, and the player has to select pendants -- that have been assigned random numeric values -- and try to matach the chosen random number without going over. ">
         <title>Pendant Collector Game</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="https://hetty-chin.github.io/Bootstrap-Portfolio/style.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <!-- Added link to the jQuery Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
         <script src="assets/javascript/game.js"></script>
     </head>
     <body>
@@ -39,39 +42,40 @@
         <div class="container border bg-white p-4">
             <div class="row align-items-center border-bottom p-4 ">
                 <div class="col">
-                    <h1>
+                    <h2>
                     Try to match this number...<br>
-                    <small class="text-muted">..but don&rsquo;t go higher or you&rsquo;ll lose!</small>
-                    </h1>
+                    <small class="text-muted">...but don&rsquo;t go higher or you&rsquo;ll lose!</small>
+                    </h2>
                 </div>
             </div> 
             <!--player will be shown a random number-->
             <div class="row align-items-center p-4">
                 <div class="col-md-12" id="game-not-started">
-                    <h1>Instructions:</h1>
+                    <h2 class="mb-4">Instructions:</h2>
                     <p>You will be given a random number at the start of the game.</p>
                     <p>There are four pendants below. Clicking each pendant will add a specific amount to your <b>Current total</b>.</p>
                     <p>You win when your <b>Current total</b> is the same as the <b>Number to match</b>. You lose the game if your <b>Current total</b> goes above the <b>Number to match</b>.</p>
                     <p>The value of each pendant is hidden from you until you click on it.</p>
                     <p>Each time the game restarts, the value of the pendants will change again.</p>
-                    <button type="button" class="btn btn-outline-secondary" id="start">Let&rsquo;s play!</button>
+                    <button type="button" class="btn my-4 btn-outline-secondary" id="start">Let&rsquo;s play!</button>
+                    <p class ="text-muted">(Press the &ldquo;Let&rsquo;s play!&rdquo; button to get started.)</p>
                 </div>
-                <div class="col-md-6 game-in-progress">
-                    <h1>The number to match:</h1>
-                    <div id="chosen-number"></div>
+                <div class="col-md-6 text-center game-in-progress">
+                    <h2>The number to match:</h2>
+                    <div class="my-3" id="chosen-number"></div>
                 </div>
-                <div class="col-md-6 game-in-progress">
+                <div class="col-md-6 text-center game-in-progress">
                     <div>
-                        <h1>Score:</h1>
-                        <h2>Wins:</h2>
+                        <h2>Score:</h2>
+                        <h2 class="my-3"><small class="text-muted">Wins:</small></h2>
                         <div id="wins"></div>
-                        <h2>Losses:</h2>
+                        <h2 class="my-3"><small class="text-muted">Losses:</small></h2>
                         <div id="losses"></div>
                     </div>
                 </div>
             </div>
             <!--there will be four pendants displayed as buttons on the page-->
-            <div class="row">
+            <div class="row align-items-center p-4 button-container">
                 <button type="button" class="btn btn-outline-secondary pendants" id="pendant1">
                     <img src="assets/images/Heart1.jpg" class="img-fluid">
                 </button>
@@ -85,9 +89,15 @@
                     <img src="assets/images/Heart4.jpg" class="img-fluid">
                 </button>
             </div>
-            <div class="row game-in-progress">
-                <h1>Current total:</h1>
-                <div id="current-total"></div>
+            <div class="row  align-items-center p-4">
+                <div class="col-md-6 text-center game-in-progress">
+                    <h2>Current total:</h2>
+                    <div class="my-3" id="current-total"></div>
+                </div>
+                <div class="col-md-6 text-center" id="you-won-lost">
+                    <h2 id="you-won">Yay, you won!<br>Try again!</h2>
+                    <h2 id="you-lost">Sorry, you lost...<br>Better luck next time!</h2>
+                </div>
             </div>
         </div>
 

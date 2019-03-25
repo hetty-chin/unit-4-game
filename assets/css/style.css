@@ -2,6 +2,27 @@
     max-width: 200px;;
 }
 
-.game-in-progress {
+.game-in-progress, #you-won, #you-lost {
     display: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#chosen-number, #current-total {
+    font-size: 50px;
+}
+
+#wins, #losses {
+    font-size: 25px;
+}
+
+#game-not-started p {
+    line-height:17px;
+}
+
+#you-lost {
+    color: red;
 }
