@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+## Pendant Collector Game
 
-You can use the [editor on GitHub](https://github.com/hetty-chin/unit-4-game/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Using jQuery, this game draws a random number that the player has to match. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+To match this random number, the player is given 4 pendants. Each pendant is assigned a random value. The value is hidden from the player, but that value is added to the total after every click of the pendant. Based on what is added, the player can calculate the value of the pendant to try and match the random number that was drawn. If the player adds too much to the value and surpasses the random number, the player loses. If the player matches the random number exactly, the player wins. Win or lose, the game resets and a new random word is drawn and each pendant is assigned new hidden values.
 
-### Markdown
+### jQuery
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+I first coded this game to work entirely in vanilla javascript to ensure I understood vanilla javascript. Then I went through and commented out each javascript function and replaced it with a jQuery function. If I removed all of my comments, the amount of code needed to create this game was _much_ smaller than what was needed in vanilla javascript. I kept some of my console.logs in the js code for better understanding of whether the code worked as it should. 
 
-```markdown
-Syntax highlighted code block
+I used random functions, timed hides, timed shows, on click events, off click events, timed fade outs, slide toggles, for loops, DOM manipulations.
 
-# Header 1
-## Header 2
-### Header 3
+### BootStrap
 
-- Bulleted
-- List
+I then styled it mostly with BootStrap CSS, reused old styling I had created for my Portfolio, and added some custom styling just for this game. 
 
-1. Numbered
-2. List
+### Linked to in my BootStrap Portfolio 
+https://hetty-chin.github.io/Bootstrap-Portfolio/portfolio.html
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hetty-chin/unit-4-game/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**I also had a lot of fun playing around with PhotoShop to tweak the images of the pendants. I know the instructions called for crystals but somehow adding a personal touch by adding my heart pendants made it so much more enjoyable :)
