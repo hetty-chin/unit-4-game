@@ -2,7 +2,7 @@
     max-width: 200px;;
 }
 
-.game-in-progress, #you-won, #you-lost {
+.game-in-progress, #you-won, #you-lost, #read-instructions {
     display: none;
 }
 
@@ -19,8 +19,9 @@
     font-size: 25px;
 }
 
-#game-not-started p {
+.game-not-started p {
     line-height:17px;
+    color: white;
 }
 
 #you-lost {

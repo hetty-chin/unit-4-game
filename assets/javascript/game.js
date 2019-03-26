@@ -14,21 +14,35 @@ $(function () {
     // the player will be shown a random number between 19-120 at the start of the game
         // is made obsolete by the jQuery function in restart: var chosenNumber = "";
         // is made obsolete by the jQuery function in restart: var chosenNumberElement = document.getElementById("chosen-number");
+        
+    $(".button-container").click(function(){
+        if (gamesStarted == false) {
+            $("#read-instructions").show(1000);
+            $("#read-instructions").hide(2000);
+        }
+    });
 
-    //start button
+    $("#instruction-refresher").click(function(){
+        console.log("i pressed it");
+        $("#start").hide();
+        $(".game-not-started").slideToggle("slow");
+    });
+    
+        //start button
         // equivalent to: document.getElementById("start").onclick = function () {
     $("#start").click(function(){
         if (gamesStarted == false) {
             gameStarted = true;
             // var gameNotStartedElement = document.getElementById("game-not-started");
             // gameNotStartedElement.style.display = "none";
-            $("#game-not-started").hide();
+            $(".game-not-started").hide();
             // var gameInProgress = document.getElementsByClassName("game-in-progress");
             // var i;
             // for (i = 0; i < gameInProgress.length; i++) {
                 // gameInProgress[i].style.display = "block";
             // }
             $(".game-in-progress").show();
+            $(".button-container").off("click");
             restart ();
         };
     });
@@ -52,10 +66,10 @@ $(function () {
         currentTotalCounter = 0;
         // is equivalent to: currentTotalElement.innerHTML = currentTotalCounter;  
         $("#current-total").html(currentTotalCounter);  
-    };
+    };    
 
-    // when the player clicks on a pendant, it will add a specific amount of points to the player's total score -- is there a way to loop this? 
-    // is equivalent to: document.getElementById("pendant1").onclick = function() {
+        // when the player clicks on a pendant, it will add a specific amount of points to the player's total score -- is there a way to loop this? 
+        // is equivalent to: document.getElementById("pendant1").onclick = function() {
     $("#pendant1").click(function(){
         console.log("clicking the first pendant grabs this number:" + pendantNumbers[0]);
         currentTotalCounter = currentTotalCounter + pendantNumbers[0];

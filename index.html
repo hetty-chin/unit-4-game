@@ -49,30 +49,29 @@
                 </div>
             </div> 
             <!--player will be shown a random number-->
-            <div class="row align-items-center p-4">
-                <div class="col-md-12" id="game-not-started">
-                    <h2 class="mb-4">Instructions:</h2>
-                    <p>You will be given a random number at the start of the game.</p>
-                    <p>There are four pendants below. Clicking each pendant will add a specific amount to your <b>Current total</b>.</p>
-                    <p>You win when your <b>Current total</b> is the same as the <b>Number to match</b>. You lose the game if your <b>Current total</b> goes above the <b>Number to match</b>.</p>
-                    <p>The value of each pendant is hidden from you until you click on it.</p>
-                    <p>Each time the game restarts, the value of the pendants will change again.</p>
-                    <button type="button" class="btn my-4 btn-outline-secondary" id="start">Let&rsquo;s play!</button>
-                    <p class ="text-muted">(Press the &ldquo;Let&rsquo;s play!&rdquo; button to get started.)</p>
-                </div>
-                <div class="col-md-6 text-center game-in-progress">
-                    <h2>The number to match:</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 pt-3 text-center game-in-progress">
+                    <h2>The Number to Match:</h2>
                     <div class="my-3" id="chosen-number"></div>
                 </div>
-                <div class="col-md-6 text-center game-in-progress">
-                    <div>
-                        <h2>Score:</h2>
-                        <h2 class="my-3"><small class="text-muted">Wins:</small></h2>
-                        <div id="wins"></div>
-                        <h2 class="my-3"><small class="text-muted">Losses:</small></h2>
-                        <div id="losses"></div>
+                <div class="col-md-6 pt-3 text-center game-in-progress">
+                    <div class="row align-items-center bg-light">
+                        <div class="col text-center game-in-progress">
+                            <h2 class="align-middle">Score:</h2>
+                        </div>
+                        <div class="col text-center game-in-progress">
+                            <h2 class="align-middle"><small class="text-muted">Wins:</small></h2>
+                            <div id="wins"></div>
+                        </div>
+                        <div class="col text-center game-in-progress">
+                            <h2 class="align-middle"><small class="text-muted">Losses:</small></h2>
+                            <div id="losses"></div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="pt-4" id="read-instructions">
+                <p>Please read the instructions, then press &ldquo;Let&rsquo;s play!&rdquo; to start playing.</p>
             </div>
             <!--there will be four pendants displayed as buttons on the page-->
             <div class="row align-items-center p-4 button-container">
@@ -89,15 +88,34 @@
                     <img src="assets/images/Heart4.jpg" class="img-fluid">
                 </button>
             </div>
-            <div class="row  align-items-center p-4">
+            <div class="row align-items-center">
                 <div class="col-md-6 text-center game-in-progress">
-                    <h2>Current total:</h2>
+                    <h2>Current Total:</h2>
                     <div class="my-3" id="current-total"></div>
                 </div>
                 <div class="col-md-6 text-center" id="you-won-lost">
                     <h2 id="you-won">Yay, you won!<br>Try again!</h2>
                     <h2 id="you-lost">Sorry, you lost...<br>Better luck next time!</h2>
                 </div>
+            </div>
+            <div class="row align-items-center border-top p-3 game-in-progress" id="instruction-refresher">
+                <div class="col-md-12 border-top-3">
+                    <h4 class="my-3">Forgot the instructions?<br>
+                        <small class="text-muted"> No need to worry. Click for a refresher.</small>
+                    </h4>
+                </div>
+            </div>
+            <div class="col-md-12 p-3 bg-secondary game-not-started">
+                <h2 class="mb-3">Instructions:</h2>
+                <p>You will be given a <b>Random&nbsp;Number&nbsp;to&nbsp;Match</b> at the start of the game.</p>
+                <p>There are four pendants. Clicking each pendant will add a specific amount to your <b>Current&nbsp;Total</b>.</p>
+                <p>You win when your <b>Current&nbsp;Total</b> is the <span class="text-success">same</span> as the <b>Number&nbsp;to&nbsp;Match</b>. You lose the game if your <b>Current&nbsp;Total</b> goes <span class="text-danger">above</span> the <b>Number&nbsp;to&nbsp;Match</b>.</p>
+                <p>The value of each pendant is hidden from you until you click on it.</p>
+                <p>Each time the game restarts, the value of the pendants will change again.</p>
+                <p>Good luck!</p>
+            </div>
+            <div class="col-md-12 py-2 game-not-started">
+                <button type="button" class="btn mt-3 btn-outline-secondary" id="start">Let&rsquo;s play!</button>
             </div>
         </div>
 
